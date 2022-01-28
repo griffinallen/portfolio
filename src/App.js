@@ -1,25 +1,56 @@
-import logo from './logo.svg';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import NavBar from './components/NavBar';
+import ConstructionList from './ConstructionList';
+import Map from './components/Map';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import './App.css';
+import About from './components/About';
+import Contact from './components/Contact';
+import Portfolio from './components/Portfolio';
 
+import React from 'react';
+import { useState, useEffect } from 'react';
+import reactDom from 'react-dom';
+
+const theme = createTheme({
+
+});
+ 
 function App() {
+  
+  //const [construction, setConstruction] = useState(['Construction 1', 'Construction 2'])
+  //<ConstructionList construction={construction} />
+
+  useEffect(() => {
+    const fetchConstruction = async () => {
+      const res = await fetch('https://511on.ca/api/v2/get/roadconditions')
+      const data = await res
+      console.log(data)
+    }
+    //fetchConstruction()
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <ThemeProvider theme={theme}>
+          <NavBar/>
+          <header className="App-header">
+          </header>
+        </ThemeProvider>
+      </div>
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/' exact  component={Portfolio} />
+     
+    </BrowserRouter>
   );
+  
 }
 
 export default App;
