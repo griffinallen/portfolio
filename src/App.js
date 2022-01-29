@@ -50,8 +50,8 @@ function App() {
         <ThemeProvider theme={theme}>
           <NavBar/>
           <header className="App-header">
-            <Route path='/portfolio/about' component={About} />
-            <Route path='/portfolio/contact' component={Contact} />
+            <Route path='/' exact component={About} />
+            <Route path='/contact' component={Contact} />
             <Route path='/portfolio' component={Portfolio} />
           </header>
         </ThemeProvider>
