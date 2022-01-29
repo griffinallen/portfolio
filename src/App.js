@@ -41,13 +41,12 @@ function App() {
         <ThemeProvider theme={theme}>
           <NavBar/>
           <header className="App-header">
+            <Route path='/' exact component={About} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/portfolio' component={Portfolio} />
           </header>
         </ThemeProvider>
       </div>
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/' exact  component={Portfolio} />
-     
     </BrowserRouter>
   );
   

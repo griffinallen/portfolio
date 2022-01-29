@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 const styles = makeStyles({
     bar:{
-        background: "#FFFAFA"
+        background: "#FFFAFA",
+        height: "10vh"
     },
     menuItem: {
         flexGrow: 1
@@ -29,18 +30,13 @@ function NavBar(){
             <Typography className={classes.space}/>
             <Typography className={classes.space}/>
             <Typography variant="h6" className={classes.menuItem}>
-                <Link to='/about' className={classes.innerItem}> 
+                <Link to='/' className={classes.innerItem}> 
                     About Me
                 </Link>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-                <Link to='/' className={classes.innerItem}> 
+                <Link to='/portfolio' className={classes.innerItem}> 
                     Portfolio
-                </Link>
-            </Typography>
-            <Typography variant="h6" className={classes.menuItem}>
-                <Link to='/contact' className={classes.innerItem}> 
-                    Contact
                 </Link>
             </Typography>
             <Typography className={classes.space}/>
