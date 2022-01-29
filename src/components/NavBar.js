@@ -30,12 +30,12 @@ function NavBar(){
             <Typography className={classes.space}/>
             <Typography className={classes.space}/>
             <Typography variant="h6" className={classes.menuItem}>
-                <Link to='/about' className={classes.innerItem}> 
+                <Link to='/portfolio/about' className={classes.innerItem}> 
                     About Me
                 </Link>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-                <Link to='/portfolio' className={classes.innerItem}> 
+                <Link to='/portfolio/' className={classes.innerItem}> 
                     Portfolio
                 </Link>
             </Typography>
