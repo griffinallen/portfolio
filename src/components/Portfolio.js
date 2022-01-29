@@ -4,6 +4,8 @@ import NewYorkNeigbourhoods from '../New York State Neighbourhood Density.png';
 
 import StCatharinesDrivingDistance from '../St. Catharines Driving Distance.png';
 
+import MonochromeStCath from '../MonochromeStCath.png';
+
 const styles = makeStyles({
     MapPicture: {
         width: "40vw",
@@ -34,6 +36,9 @@ function Portfolio(){
                     <img src={NewYorkNeigbourhoods} className={classes.MapPicture} />
                     <img src={StCatharinesDrivingDistance} className={classes.MapPicture} />
                 </div>     
+                <div>
+                    <img src={MonochromeStCath} className={classes.MapPicture} />
+                </div> 
             </div >
         </div>
     );
