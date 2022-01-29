@@ -22,18 +22,27 @@ const theme = createTheme({
 });
  
 function App() {
+
+  
   
   //const [construction, setConstruction] = useState(['Construction 1', 'Construction 2'])
   //<ConstructionList construction={construction} />
 
+  /*
   useEffect(() => {
+    document.title = "Griffin Allen";  
     const fetchConstruction = async () => {
       const res = await fetch('https://511on.ca/api/v2/get/roadconditions')
       const data = await res
       console.log(data)
     }
     //fetchConstruction()
-  })
+  });
+  */
+
+  useEffect(() => {
+    document.title = "Griffin Allen"
+  }, [])
 
   return (
     <BrowserRouter>
