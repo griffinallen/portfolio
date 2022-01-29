@@ -20,7 +20,7 @@ function About(){
         <div className="content-wrapper">
             <h6 className={classes.BlackText}>
                 Thanks for checking out my site!<br></br>
-                My name is Griffin Allen. I'm a geographer/developer in the Niagara region.
+                My name is Griffin Allen. I'm a developer/geographer in the Niagara region.
             </h6>
             <div>
                 <img src={MyPicture} className={classes.MainPicture} />
