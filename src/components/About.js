@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-import MyPicture from "../me.jpg"
+import MyPicture from "../assets/me.jpg"
 
 const styles = makeStyles({
     MainPicture:{

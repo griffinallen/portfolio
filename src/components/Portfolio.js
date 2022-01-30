@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 
-import NewYorkNeigbourhoods from '../New York State Neighbourhood Density.png';
+import NewYorkNeigbourhoods from '../assets/New York State Neighbourhood Density.png';
 
-import StCatharinesDrivingDistance from '../St. Catharines Driving Distance.png';
+import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distance.png';
 
-import MonochromeStCath from '../MonochromeStCath.png';
+import MonochromeStCath from '../assets/MonochromeStCath.png';
 
 const styles = makeStyles({
     MapPicture: {
