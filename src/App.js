@@ -3,11 +3,7 @@ import NavBar from './components/NavBar';
 import ConstructionList from './ConstructionList';
 import Map from './components/Map';
 import { render } from "react-dom";
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -45,18 +41,20 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <ThemeProvider theme={theme}>
           <NavBar/>
           <header className="App-header">
-            <Route path='/' exact component={About} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/portfolio' component={Portfolio} />
+            <Switch>
+              <Route path='/about' exact component={About} />
+              <Route path='/contact' component={Contact} />
+              <Route path='/' component={Portfolio} />
+            </Switch>
           </header>
         </ThemeProvider>
-      </div>
-    </BrowserRouter>
+      </div>  
+    </Router>
   );
   
 }
