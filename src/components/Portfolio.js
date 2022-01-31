@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 
+import Map from './Map';
+
 import NewYorkNeigbourhoods from '../assets/New York State Neighbourhood Density.png';
 
 import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distance.png';
@@ -38,7 +40,10 @@ function Portfolio(){
                 </div>     
                 <div>
                     <img src={MonochromeStCath} className={classes.MapPicture} />
-                </div> 
+                </div>
+                <div>
+                    <Map data={"Amazing Race"}/>
+                </div>
             </div >
         </div>
     );
