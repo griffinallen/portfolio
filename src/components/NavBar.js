@@ -2,10 +2,13 @@ import { Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { Link } from 'react-router-dom'
 
+// box shadow - right down blur spread color
 const styles = makeStyles({
     bar:{
         background: "#FFFAFA",
-        height: "10vh"
+        height: "10vh",
+        WebkitBoxShadow: "0px 0px 5px 1px #000", 
+        boxShadow: "0px 0px 5px 1px #000"
     },
     menuItem: {
         flexGrow: 1

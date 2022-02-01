@@ -11,8 +11,9 @@ import MonochromeStCath from '../assets/MonochromeStCath.png';
 const styles = makeStyles({
     MapPicture: {
         width: "40vw",
-        outline: "black solid medium",
-        margin: "2vw"
+        margin: "2vw",
+        WebkitBoxShadow: "0px 0px 5px 3px #000", 
+        boxShadow: "0px 0px 5px 3px #000"
     },
     BlackText:{
         color: "black",
@@ -50,7 +51,7 @@ function Portfolio(){
                 </div>
 
                 <h6 className={classes.BlackText}>
-                Amazing Race Locations (Country)
+                Amazing Race Locations
                 </h6>
                 <div className={classes.MapSection}>
                     <Map data={"Amazing Race"} season={0}/>
