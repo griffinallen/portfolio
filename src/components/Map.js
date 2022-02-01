@@ -3,6 +3,8 @@ import { PropTypes } from 'prop-types'
 import AmazingRaceData from '../assets/AmazingRaceLocations.json';
 import React, {useEffect, useState} from 'react';
 import { map } from 'leaflet';
+import L from 'leaflet';
+
 
 /**
  fromlng: -112.49150994096404, 
@@ -19,18 +21,28 @@ const INITIAL_MARKER = [
     [["United States"],[-112.49150994096404, 45.69557676130325]]
 ]
 
+const myIcon = new L.Icon({
+    iconUrl: require('../assets/marker.jpg'),
+    iconRetinaUrl: require('../assets/marker.jpg'),
+    iconAnchor: null,
+    popupAnchor: null,
+    shadowUrl: null,
+    shadowSize: null,
+    shadowAnchor: null,
+    iconSize: new L.Point(10, 10),
+    className: 'leaflet-div-icon'
+});
+
 const Map = ({ data, season }) => {
     const [lines, SetLines] = useState(INITIAL_LINES)
     const [markers, SetMarkers] = useState(INITIAL_MARKER)
     useEffect(() => {
         if (data == "Amazing Race"){
-            var from = season
-            var to = season
+            var from = season+1
+            var to = season+1
             if (season==0){
-                from = 1
-                
-                // change to AmazingRaceData.length
-                to = 14
+                from = 0
+                to = AmazingRaceData.length-1
             }
 
             var toLines = [[]]
@@ -81,10 +93,10 @@ const Map = ({ data, season }) => {
         />
         {lines.map(([fromlng,fromlat,id,tolng,tolat]) => 
             <Polyline key={`line-${id}`} positions={[
-                [fromlat, fromlng], [tolat, tolng],]} color={'red'}/>  
+                [fromlat, fromlng], [tolat, tolng],]} color={'black'}/>  
         )}
         {markers.map(([country, id, num, location])=>
-            <Marker key={`marker-${id}`} position={location} color={'red'}>
+            <Marker key={`marker-${id}`} position={location} icon={myIcon}>
                 <Popup>
                     <span>{num+1}: {country}</span>
                 </Popup>
