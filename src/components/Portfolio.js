@@ -9,28 +9,11 @@ import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distan
 import MonochromeStCath from '../assets/MonochromeStCath.png';
 
 const styles = makeStyles({
-    MapPicture: {
-        width: "40vw",
-        margin: "2vw",
-        WebkitBoxShadow: "0px 0px 5px 3px #000", 
-        boxShadow: "0px 0px 5px 3px #000"
-    },
     BlackText:{
         color: "black",
         fontFamily: "Poppins",
 
     },
-    PictureSection:{
-
-    },
-    MapSection:{
-        outline: "black solid medium",
-        marginLeft: "15vw",
-        marginRight: "15vw",
-        marginTop: "2vw",
-        marginBottom: "2vw"
-    }
-
 })
 
 function Portfolio(){
@@ -41,19 +24,19 @@ function Portfolio(){
             <h6 className={classes.BlackText}>
             Below you can find some of my maps. To see some of my coding projects, check out my <a href="https://github.com/griffinallen">GitHub</a>
             </h6>
-            <div className={classes.PictureSection}>
+            <div>
                 <div>
-                    <img src={NewYorkNeigbourhoods} className={classes.MapPicture} />
-                    <img src={StCatharinesDrivingDistance} className={classes.MapPicture} />
+                    <img src={NewYorkNeigbourhoods} className={"map-picture"} />
+                    <img src={StCatharinesDrivingDistance} className={"map-picture"} />
                 </div>     
                 <div>
-                    <img src={MonochromeStCath} className={classes.MapPicture} />
+                    <img src={MonochromeStCath} className={"map-picture"} />
                 </div>
 
                 <h6 className={classes.BlackText}>
                 Amazing Race Locations
                 </h6>
-                <div className={classes.MapSection}>
+                <div>
                     <Map data={"Amazing Race"} season={0}/>
                 </div>
             </div >

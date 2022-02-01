@@ -3,9 +3,6 @@ import { makeStyles } from "@material-ui/core";
 import MyPicture from "../assets/me.jpg"
 
 const styles = makeStyles({
-    MainPicture:{
-        width: "40vw"
-    },
     BlackText:{
         color: "black",
         fontFamily: "Poppins",
@@ -23,7 +20,7 @@ function About(){
                 My name is Griffin Allen. I'm a developer/geographer in the Niagara region.
             </h6>
             <div>
-                <img src={MyPicture} className={classes.MainPicture} />
+                <img src={MyPicture} className={"map-picture"} />
             </div>
             <h6 className={classes.BlackText}>
                 If you'd like to contact me, you can find me on <a href="https://www.linkedin.com/in/griffin-allen-090655171/">LinkedIn</a> or feel free to send me an <a href="mailto:griffinallendev@gmail.com">email</a>

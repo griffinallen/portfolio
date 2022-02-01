@@ -37,12 +37,38 @@
   }
 }
 
+
 .leaflet-container{
   width: 60vw;
   height: 60vh;
   -webkit-box-shadow: 0px 0px 5px 3px #000; 
   box-shadow: 0px 0px 5px 3px #000;
   align-items: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .leaflet-container{
+    width: 86vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+
+.map-picture {
+  width: 40vw;
+  margin: 2vw;
+  -webkit-box-shadow: 0px 0px 5px 3px #000;
+  box-shadow: 0px 0px 5px 3px #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .map-picture {
+    width: 88vw;
+  }
 }
 
 .content-wrapper{
