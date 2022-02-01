@@ -29,7 +29,7 @@ const myIcon = new L.Icon({
     shadowUrl: null,
     shadowSize: null,
     shadowAnchor: null,
-    iconSize: new L.Point(20, 20),
+    iconSize: new L.Point(5, 5),
     className: 'leaflet-div-icon'
 });
 
@@ -94,7 +94,7 @@ const Map = ({ data, season }) => {
         />
         {lines.map(([fromlng,fromlat,id,tolng,tolat]) => 
             <Polyline key={`line-${id}`} positions={[
-                [fromlat, fromlng], [tolat, tolng],]} color={'black'}/>  
+                [fromlat, fromlng], [tolat, tolng],]} color={'black'} weight={'0.15'}/>  
         )}
         {markers.map(([country, id, num, location])=>
             <Marker key={`marker-${id}`} position={location} icon={myIcon}>
