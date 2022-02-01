@@ -21,6 +21,13 @@ const styles = makeStyles({
     },
     PictureSection:{
 
+    },
+    MapSection:{
+        outline: "black solid medium",
+        marginLeft: "15vw",
+        marginRight: "15vw",
+        marginTop: "2vw",
+        marginBottom: "2vw"
     }
 
 })
@@ -41,8 +48,8 @@ function Portfolio(){
                 <div>
                     <img src={MonochromeStCath} className={classes.MapPicture} />
                 </div>
-                <div>
-                    <Map data={"Amazing Race"}/>
+                <div className={classes.MapSection}>
+                    <Map data={"Amazing Race"} season={0}/>
                 </div>
             </div >
         </div>

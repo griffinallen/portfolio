@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 import { PropTypes } from 'prop-types'
 import AmazingRaceData from '../assets/AmazingRaceLocations.json';
 import React, {useEffect, useState} from 'react';
+import { map } from 'leaflet';
 
 /**
  fromlng: -112.49150994096404, 
@@ -18,31 +19,57 @@ const INITIAL_MARKER = [
     [["United States"],[-112.49150994096404, 45.69557676130325]]
 ]
 
-const Map = ({ data }) => {
+const Map = ({ data, season }) => {
     const [lines, SetLines] = useState(INITIAL_LINES)
     const [markers, SetMarkers] = useState(INITIAL_MARKER)
     useEffect(() => {
         if (data == "Amazing Race"){
+            var from = season
+            var to = season
+            if (season==0){
+                from = 1
+                
+                // change to AmazingRaceData.length
+                to = 14
+            }
+
             var toLines = [[]]
             var toMarkers = [[]]
-            var from = false
-            var count = 0;
-            var mCount = 0;
-            for (var i=1; i<Object.keys(AmazingRaceData[0]).length; i++){
-                if (AmazingRaceData[0][i]=="" || AmazingRaceData[0][i+1]=="") break;
-                    toLines[count] = [
-                        AmazingRaceData[0][i][1],
-                        AmazingRaceData[0][i][2],
-                        count,
-                        AmazingRaceData[0][i+1][1],
-                        AmazingRaceData[0][i+1][2]
-                    ]
-                if (AmazingRaceData[0][i][1]!=AmazingRaceData[0][i+1][1]){
-                    toMarkers[mCount] = [AmazingRaceData[0][i][0], mCount, [AmazingRaceData[0][i][2], AmazingRaceData[0][i][1]]]
-                    mCount++;
+            
+            var totalCount = 0;
+            var totalmCount = 0;
+
+            for (var j=from; j<=to; j++){
+                var count = 0;
+                var mCount = 0;
+            
+                for (var i=1; i<Object.keys(AmazingRaceData[j]).length-1; i++){
+                    if (AmazingRaceData[j][i]=="" || AmazingRaceData[j][i+1]=="") break;
+                        toLines[totalCount] = [
+                            AmazingRaceData[j][i][1],
+                            AmazingRaceData[j][i][2],
+                            totalCount,
+                            AmazingRaceData[j][i+1][1],
+                            AmazingRaceData[j][i+1][2]
+                        ]
+                    if (AmazingRaceData[j][i][1]!=AmazingRaceData[j][i+1][1]){
+                        toMarkers[totalmCount] = [
+                            AmazingRaceData[j][i][0],
+                            totalmCount, 
+                            mCount,
+                            [
+                                AmazingRaceData[j][i][2], 
+                                AmazingRaceData[j][i][1]
+                            ]
+                        ]
+                        mCount++;
+                        totalmCount++;
+                    }
+                    count++;
+                    totalCount++;
                 }
-                count++;
-            }
+        }
+        console.log(toMarkers);
             SetLines(toLines)
             SetMarkers(toMarkers)
         }
@@ -56,10 +83,10 @@ const Map = ({ data }) => {
             <Polyline key={`line-${id}`} positions={[
                 [fromlat, fromlng], [tolat, tolng],]} color={'red'}/>  
         )}
-        {markers.map(([country, id, location])=>
-            <Marker key={`marker-${id}`} position={location}>
+        {markers.map(([country, id, num, location])=>
+            <Marker key={`marker-${id}`} position={location} color={'red'}>
                 <Popup>
-                    <span>{id+1}: {country}</span>
+                    <span>{num+1}: {country}</span>
                 </Popup>
             </Marker>
         )}
@@ -68,11 +95,13 @@ const Map = ({ data }) => {
 }
 
 Map.defaultProps = {
-    data:""
+    data:"",
+    season:0
 }
 
 Map.propTypes = {
     data: PropTypes.string,
+    season: PropTypes.number
 }
 
 

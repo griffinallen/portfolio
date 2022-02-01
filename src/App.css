@@ -41,6 +41,7 @@
   width: 60vw;
   height: 60vh;
   outline: black solid medium !important;
+  align-items: center;
 }
 
 .content-wrapper{
