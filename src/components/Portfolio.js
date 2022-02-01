@@ -48,6 +48,10 @@ function Portfolio(){
                 <div>
                     <img src={MonochromeStCath} className={classes.MapPicture} />
                 </div>
+
+                <h6 className={classes.BlackText}>
+                Amazing Race Locations (Country)
+                </h6>
                 <div className={classes.MapSection}>
                     <Map data={"Amazing Race"} season={0}/>
                 </div>

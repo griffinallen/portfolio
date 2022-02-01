@@ -29,7 +29,7 @@ const myIcon = new L.Icon({
     shadowUrl: null,
     shadowSize: null,
     shadowAnchor: null,
-    iconSize: new L.Point(10, 10),
+    iconSize: new L.Point(20, 20),
     className: 'leaflet-div-icon'
 });
 
@@ -87,9 +87,10 @@ const Map = ({ data, season }) => {
         }
     }, [])
     return (
-    <MapContainer center={[0,0]} zoom={1} scrollWheelZoom={true}>
-        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    <MapContainer center={[20,0]} zoom={2} scrollWheelZoom={true}>
+        <TileLayer attribution='&copy; | React.js | Amazing Race location data scraped from <a href="https://amazingrace.fandom.com/wiki/The_Amazing_Race_Wiki">Amazing Race Wiki</a> | Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+            url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
+            
         />
         {lines.map(([fromlng,fromlat,id,tolng,tolat]) => 
             <Polyline key={`line-${id}`} positions={[
@@ -97,9 +98,6 @@ const Map = ({ data, season }) => {
         )}
         {markers.map(([country, id, num, location])=>
             <Marker key={`marker-${id}`} position={location} icon={myIcon}>
-                <Popup>
-                    <span>{num+1}: {country}</span>
-                </Popup>
             </Marker>
         )}
     </MapContainer>
