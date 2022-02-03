@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.671534eb.css",
-    "main.js": "/portfolio/static/js/main.6a451496.js",
+    "main.js": "/portfolio/static/js/main.60c1ad92.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/New York State Neighbourhood Density.png": "/portfolio/static/media/New York State Neighbourhood Density.6e3d350baa5516aec2bf.png",
     "static/media/St. Catharines Driving Distance.png": "/portfolio/static/media/St. Catharines Driving Distance.007db4b21838a3fd6bda.png",
+    "static/media/Amazing Race.png": "/portfolio/static/media/Amazing Race.a0ecf3600dff7a654d9a.png",
     "static/media/MonochromeStCath.png": "/portfolio/static/media/MonochromeStCath.5a39a9e551b0a911e222.png",
+    "static/media/Nearest Park.png": "/portfolio/static/media/Nearest Park.3fa862caeb4f4b30a825.png",
     "static/media/me.jpg": "/portfolio/static/media/me.a6c6cebdcd2e2a537bfb.jpg",
     "static/media/marker.jpg": "/portfolio/static/media/marker.f31cf523dfdb9d1afe39.jpg",
     "index.html": "/portfolio/index.html",
     "main.671534eb.css.map": "/portfolio/static/css/main.671534eb.css.map",
-    "main.6a451496.js.map": "/portfolio/static/js/main.6a451496.js.map",
+    "main.60c1ad92.js.map": "/portfolio/static/js/main.60c1ad92.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.671534eb.css",
-    "static/js/main.6a451496.js"
+    "static/js/main.60c1ad92.js"
   ]
 }
