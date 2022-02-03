@@ -3,10 +3,10 @@ import { makeStyles } from "@material-ui/core";
 import Map from './Map';
 
 import NewYorkNeigbourhoods from '../assets/New York State Neighbourhood Density.png';
-
 import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distance.png';
-
 import MonochromeStCath from '../assets/MonochromeStCath.png';
+import NearestPark from '../assets/Nearest Park.png';
+import AmazingRace from '../assets/Amazing Race.png'
 
 const styles = makeStyles({
     BlackText:{
@@ -26,18 +26,15 @@ function Portfolio(){
             </h6>
             <div>
                 <div>
-                    <img src={NewYorkNeigbourhoods} className={"map-picture"} />
-                    <img src={StCatharinesDrivingDistance} className={"map-picture"} />
+                    <img src={AmazingRace} className={"map-picture"} />
+                    <img src={NearestPark} className={"map-picture"} />
                 </div>     
                 <div>
                     <img src={MonochromeStCath} className={"map-picture"} />
+                    <img src={StCatharinesDrivingDistance} className={"map-picture"} />
                 </div>
-
-                <h6 className={classes.BlackText}>
-                Amazing Race Locations
-                </h6>
                 <div>
-                    <Map data={"Amazing Race"} season={0}/>
+                    <img src={NewYorkNeigbourhoods} className={"map-picture"} />
                 </div>
             </div >
         </div>
