@@ -1,7 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-
-import Map from './Map';
-
 import NewYorkNeigbourhoods from '../assets/New York State Neighbourhood Density.png';
 import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distance.png';
 import MonochromeStCath from '../assets/MonochromeStCath.png';

@@ -8,7 +8,8 @@ const styles = makeStyles({
         background: "#FFFAFA",
         height: "10vh",
         WebkitBoxShadow: "0px 0px 5px 1px #000", 
-        boxShadow: "0px 0px 5px 1px #000"
+        boxShadow: "0px 0px 5px 1px #000",
+        fontFamily: "Poppins"
     },
     menuItem: {
         flexGrow: 1
