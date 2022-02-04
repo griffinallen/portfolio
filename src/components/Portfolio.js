@@ -23,8 +23,12 @@ function Portfolio(){
             </h6>
             <div>
                 <div>
-                    <img src={AmazingRace} className={"map-picture"} />
-                    <img src={NearestPark} className={"map-picture"} />
+                    <a href="https://griffinallen.github.io/amazing-race-locations/">
+                        <img src={AmazingRace} className={"map-picture clickable-picture"}/>
+                    </a>
+                    <a href="https://griffinallen.github.io/nearest-park">
+                        <img src={NearestPark} className={"map-picture clickable-picture"}/>
+                    </a>
                 </div>     
                 <div>
                     <img src={MonochromeStCath} className={"map-picture"} />
