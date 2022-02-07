@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // box shadow - right down blur spread color
 const styles = makeStyles({
     bar:{
-        background: "hsl(22, 100%, 96%);",
+        background: "snow",
         height: "10vh",
         WebkitBoxShadow: "0px 0px 5px 1px #000", 
         boxShadow: "0px 0px 5px 1px #000",
