@@ -3,7 +3,8 @@ import NewYorkNeigbourhoods from '../assets/New York State Neighbourhood Density
 import StCatharinesDrivingDistance from '../assets/St. Catharines Driving Distance.png';
 import MonochromeStCath from '../assets/MonochromeStCath.png';
 import NearestPark from '../assets/Nearest Park.png';
-import AmazingRace from '../assets/Amazing Race.png'
+import AmazingRace from '../assets/Amazing Race.png';
+import CovidCases from '../assets/Covid Cases.gif';
 
 const styles = makeStyles({
     BlackText:{
@@ -31,10 +32,11 @@ function Portfolio(){
                     </a>
                 </div>     
                 <div>
-                    <img src={MonochromeStCath} className={"map-picture"} />
+                    <img src={CovidCases} className={"map-picture"} />
                     <img src={StCatharinesDrivingDistance} className={"map-picture"} />
                 </div>
                 <div>
+                    <img src={MonochromeStCath} className={"map-picture"} />
                     <img src={NewYorkNeigbourhoods} className={"map-picture"} />
                 </div>
             </div >
