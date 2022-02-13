@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.da634db8.css",
-    "main.js": "/portfolio/static/js/main.44b4cb42.js",
+    "main.js": "/portfolio/static/js/main.0e8fc36e.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Covid Cases.gif": "/portfolio/static/media/Covid Cases.2fd767f1c27e45cb11b2.gif",
     "static/media/New York State Neighbourhood Density.png": "/portfolio/static/media/New York State Neighbourhood Density.6e3d350baa5516aec2bf.png",
@@ -10,13 +10,14 @@
     "static/media/MonochromeStCath.png": "/portfolio/static/media/MonochromeStCath.5a39a9e551b0a911e222.png",
     "static/media/Nearest Park.png": "/portfolio/static/media/Nearest Park.3fa862caeb4f4b30a825.png",
     "static/media/me.jpg": "/portfolio/static/media/me.a6c6cebdcd2e2a537bfb.jpg",
+    "static/media/wordle.png": "/portfolio/static/media/wordle.51eb6d21b6fa1fcbbcfd.png",
     "index.html": "/portfolio/index.html",
     "main.da634db8.css.map": "/portfolio/static/css/main.da634db8.css.map",
-    "main.44b4cb42.js.map": "/portfolio/static/js/main.44b4cb42.js.map",
+    "main.0e8fc36e.js.map": "/portfolio/static/js/main.0e8fc36e.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da634db8.css",
-    "static/js/main.44b4cb42.js"
+    "static/js/main.0e8fc36e.js"
   ]
 }
