@@ -5,6 +5,7 @@ import MonochromeStCath from '../assets/MonochromeStCath.png';
 import NearestPark from '../assets/Nearest Park.png';
 import AmazingRace from '../assets/Amazing Race.png';
 import CovidCases from '../assets/Covid Cases.gif';
+import Wordle from '../assets/wordle.png'
 
 const styles = makeStyles({
     BlackText:{
@@ -30,7 +31,12 @@ function Portfolio(){
                     <a href="https://griffinallen.github.io/nearest-park">
                         <img src={NearestPark} className={"map-picture clickable-picture"}/>
                     </a>
-                </div>     
+                </div>  
+                <div>
+                    <a href="https://griffinallen.github.io/wordle-clone/">
+                        <img src={AmazingRace} className={"map-picture clickable-picture"}/>
+                    </a>
+                </div>   
                 <div>
                     <img src={CovidCases} className={"map-picture"} />
                     <img src={StCatharinesDrivingDistance} className={"map-picture"} />
