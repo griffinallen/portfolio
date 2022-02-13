@@ -34,7 +34,7 @@ function Portfolio(){
                 </div>  
                 <div>
                     <a href="https://griffinallen.github.io/wordle-clone/">
-                        <img src={AmazingRace} className={"map-picture clickable-picture"}/>
+                        <img src={Wordle} className={"map-picture clickable-picture"}/>
                     </a>
                 </div>   
                 <div>
