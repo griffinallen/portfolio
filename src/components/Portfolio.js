@@ -21,7 +21,7 @@ function Portfolio(){
         <div className="content-wrapper">
             <h6 className={classes.BlackText}>Welcome!</h6>
             <h6 className={classes.BlackText}>
-            Below you can find some of my maps. To see some of my coding projects, check out my <a href="https://github.com/griffinallen">GitHub</a>
+            Below you can find some of my projects. To see some of the code behind my projects, check out my <a href="https://github.com/griffinallen">GitHub</a>
             </h6>
             <div>
                 <div>
