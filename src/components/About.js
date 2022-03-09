@@ -20,7 +20,7 @@ function About(){
                 My name is Griffin Allen. I'm a developer/geographer in the Niagara region.
             </h6>
             <div>
-                <img src={MyPicture} className={"map-picture"} />
+                <iframe width="100%" height="800px" src="https://brock.maps.arcgis.com/apps/Cascade/index.html?appid=b64abe6507d64a4097f5c9a70e0cc1d9" frameborder="0" scrolling="yes"></iframe>
             </div>
             <h6 className={classes.BlackText}>
                 If you'd like to contact me, you can find me on <a href="https://www.linkedin.com/in/griffin-allen-090655171/">LinkedIn</a> or feel free to send me an <a href="mailto:griffinallendev@gmail.com">email</a>
